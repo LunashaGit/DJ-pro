@@ -1,0 +1,41 @@
+.butt{
+    background: $purple;
+    text-transform: uppercase;
+    color: $white;
+    height: 5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: $white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    border: 0;
+    &--big{
+        font-size: 1.4rem;
+        padding: 0 7rem;
+        font-weight: 700;
+    }
+    &--medium{
+        padding: 0 3rem;
+        font-weight: 600;
+    }
+    &--mini{
+        border-style: none;
+        width: 5rem;
+        padding: 0.8rem 0 0 0;
+        font-size: 2rem;
+    }
+    &--transpa{
+        background: $white;
+        color: $dark-grey;
+        border: solid 0.1rem $dark-grey;
+        &:hover{
+            background: $purple;
+            color: $white;
+            border: 0;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.subs{
+    background-size: 100%;
+    background: url(../images/homepage-footer-background.jpg) center/cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem 2rem 8rem 2rem;
+    &__h2{
+        margin:4rem auto;
+        font-size: 2.2rem;
+        max-width: 80rem;
+    }
+    div{
+        max-width: 80rem;
+    }
+    &__mail{
+        width: 28rem;
+        height: 5rem;
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        &::placeholder{
+            padding-left: 1rem;
+            font-size: 1.4rem;
+        }
+    }
+    .butt{
+        width: 28rem;
+        height: 5rem;
+        border-radius: 0.5rem;
+    }
+    
+}
+@media screen and (min-width: 767px){
+    .subs{
+        padding: 2rem 4rem 8rem 4rem;
+        div{
+            display: flex;
+        }
+        &__h2{
+            font-size: 2.2rem;
+            margin-top: 4rem;
+        }
+        &__mail{
+            margin: 0;
+            width: 25rem;
+            height: 5rem;
+            margin-right: 2rem;
+            &::placeholder{
+                font-size: 1.5rem;
+            }
+        }
+        .butt{
+            margin: 0;
+            width: 15rem ;
+            height: 5rem;
+            padding: 0;
+        }
+        
+    }
+}
+@media screen and (min-width: 1024px){
+    .subs{
+        &__mail{
+            width: 50rem;
+        }
+    }
+}

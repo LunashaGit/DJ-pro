@@ -1,0 +1,43 @@
+.partn{
+  width: 100%;
+  height: 30rem;
+  padding: 5rem 0rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+	align-items: center;
+  color: $white;
+  &__h2{
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+  &__p{
+    font-size: 5rem;
+    text-align: center;
+  }
+  &__bg{
+    width: 100vw;
+    background: url("../images/homepage-sponsors-background.jpg") center/cover;
+  }
+}    
+
+#carousel2{
+    max-width: 80rem;
+    display: flex;
+  .carousel__pagination__button{
+    background-color: $whiteTranspa;
+    &--active {
+      background-color: $purple;
+    }
+  }
+} 
+
+@media screen and (min-width: 1024px){
+  .partn{
+    margin: 0 auto;
+    max-width: 90rem;
+    overflow: hidden;
+  }
+}

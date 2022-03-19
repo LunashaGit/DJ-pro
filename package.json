@@ -1,0 +1,23 @@
+{
+  "name": "hamilton-6-dj-project-groupe-5",
+  "version": "1.0.0",
+  "description": "\"# hamilton-6-dj-project-groupe-5\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/becodeorg/hamilton-6-dj-project-groupe-5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/becodeorg/hamilton-6-dj-project-groupe-5/issues"
+  },
+  "homepage": "https://github.com/becodeorg/hamilton-6-dj-project-groupe-5#readme",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}

@@ -1,0 +1,59 @@
+.abt{
+    margin: 30rem 2rem 5rem 2rem;
+    &__img{
+        border-radius: 0.5rem;  
+    }
+    &__art{
+        color: $dark-grey;
+    }
+    &__h2{
+        font-size: 2.2rem;
+        margin: 2rem auto 1rem auto;
+    }
+    &__p{
+        font-size: 1.4rem;
+        font-weight: 200;
+    }
+    &__h3{
+        font-size: 2rem;
+        font-weight: 200;
+        margin: 1.5rem 0 1.5rem 2rem;
+    }
+}
+@media screen and (min-width: 767px){
+    .abt{
+        margin: 30rem 4rem 5rem 4rem;
+        display: grid;
+        grid-template-columns: 40% calc(60% - 2rem);
+        gap: 2rem;
+        &__h2{
+            font-size: 2rem;
+            margin: 0;
+        }
+        &__p{
+            font-size: 1.2rem;
+        }
+        &__h3{
+            font-size: 1.6rem;
+            margin: 1.5rem 2rem 1.5rem 2rem;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .abt{
+        max-width: 80rem;
+        margin: 13rem auto 8rem auto;
+        padding: 0 0 0 8rem;
+        grid-template-columns: calc(50% - 4rem) calc(50% - 4rem);
+        gap: 8rem;
+        &__h2{
+            font-size: 2.2rem;
+        }
+        &__p{
+            font-size: 1rem;
+        }
+        &__h3{
+            font-size: 1.4rem;
+        }
+    }
+}

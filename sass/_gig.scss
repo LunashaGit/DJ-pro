@@ -1,0 +1,156 @@
+.player{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    .play{
+        font-size: 3rem;
+        color: $whiteTranspa;
+        padding-bottom: 0.5rem;
+    }
+    .playerseekbarslider{
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-right: 14rem;
+        height: 0.2rem;
+        background-color: $whiteTranspa2;
+    }
+    .playertime{
+        font-size: 1.5rem;
+    }
+    .tiret{
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    .playerlength{
+        font-size: 1.5rem;
+    }
+
+}
+.gig{
+    max-width: 80rem;
+    margin: 4rem 2rem;
+    background: $dark-grey;
+    border-radius: 0.5rem;
+    &__art{
+        padding: 2rem;
+        margin-top: -8rem;
+        text-align: center;
+        color: $white;
+        background: url('../images/bg-counter.jpg') no-repeat center/cover;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 1em #000; 
+    }
+    &__div{
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        &--time{
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &--text{
+            text-transform: uppercase;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    &__time{
+        font-size: 3rem;
+    }
+    &__h2{
+        font-size: 2rem;
+        margin: 1rem auto;
+    }
+    &__p{
+        font-size: 1.2rem;
+        display: block;
+        text-align: center;
+        &--seconds{
+            display: none;
+        }
+    }
+    &__time--seconds{
+        display: none;
+    }
+    .butt{
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 767px){
+    .player{
+        .playerseekbarslider{
+            padding-right: 38rem;
+            height: 0.3rem;
+        }
+    }
+    .gig{
+        margin: 4rem 4rem;
+        &__div{
+            &--time{
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            &--text{
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+        &__time{
+            font-size: 4rem;
+        }
+        &__p{
+            font-size: 1.2rem;
+            &--seconds{
+                display: initial;
+            } 
+        }
+        &__time--seconds{
+            display: initial;
+        }
+        .butt{
+            margin-top: 0.8rem;
+            padding: 0 20rem;
+            font-size: 1.2rem;
+        }
+        &__h2{
+            font-weight: 500;
+            margin: 0.5rem auto;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .player{
+        .playerseekbarslider{
+            padding-right: 65rem;
+        }
+        .play{
+            padding: 0;
+        }
+    }
+    .gig{
+        margin: -12rem auto 0 auto;
+        &__art{
+            padding: 1rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+        &__div2{
+            width: 20rem;
+            text-align: left;
+            .gig__p{
+                text-align: left;
+            }
+        }
+        &__div{
+            width: 35rem;
+        }
+        .butt{
+            margin: 0;
+            padding: 0 4rem;
+        }
+    }
+}
+

@@ -1,0 +1,227 @@
+.info{
+    margin: 0 2rem;
+    font-size: 3.6rem;
+    color: $dark-grey;
+    max-width: 80rem;
+    &__h2{
+        width: 16.5rem;
+        padding: 5rem 0 1rem 0;
+        font-size: 2.4rem;
+        font-weight: 500;
+        border-bottom: 0.1rem solid $greyTranspa;
+        margin-bottom: 2rem;
+    }
+    &__h3{
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+    &__icc{
+        color: $greyTranspa;
+        font-size: 1.5rem;
+    }
+    &__box{
+        width: 60vw;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+    &__ico{
+        color: $dark-grey;
+        text-decoration: none;
+        font-size: 3.6rem;
+    }
+    &__p{
+        font-weight: 200;
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        &--ita{
+            font-size: 1.8rem;
+            font-style: italic;
+            display: none;
+        }
+    }
+    &__spanImg{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-end;
+        margin-bottom: 1.5rem;
+    }
+    &__sign{
+        width: 15rem;
+        transition: 0.8s ease-in-out;  
+        visibility: hidden;
+    }
+    &__img{
+        margin: 5rem 0;
+    }
+}
+.description{
+    background: url(./../images/bg-circle-2.png) no-repeat top center/cover;
+    background-color: $greyTranspa2;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    &__art{
+        max-width: 80rem;
+    }
+    &__h2{
+        max-width: 80rem;
+        margin: 0 1rem 2rem 1rem;
+        font-size: 2rem;
+    }
+    &__square{
+        font-size: 4rem;
+        color: $purple;
+        text-shadow: 0.1rem 0.1rem 0 $dark-grey;
+    }
+    &__h3{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    &__p{
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin: 1rem 0;
+    }
+}
+
+
+@media screen and (min-width: 767px){
+    .info{
+        margin: 0 3.5rem;
+        &__h2{
+            width: 14rem;
+            font-size: 2rem;
+        }
+        &__coord{
+            width: 30rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__h3{
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+        &__icc{
+            margin-right: 0.5rem;
+        }
+        &__box{
+            width: 13rem;
+        }
+        &__ico{
+            font-size: 2rem;
+        }
+        &__p{
+            font-size: 1.2rem;
+            &--ita{
+                font-size: 1.5rem;
+            }
+        }
+        &__img{
+            width: 40rem;
+        }
+    }
+    .description{
+        padding: 5rem 3.5rem;
+        &__art{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            column-gap: 2rem;
+            row-gap: 2rem;
+        }
+        &__box{
+            display: grid;
+            column-gap: 2.5rem;
+            row-gap: 0.5rem;
+            grid-template-areas:
+            "a b"
+            "a c";
+        }
+        &__square{
+            grid-area: a;
+        }
+        &__h3{
+            grid-area: b;
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-align: left;
+        }
+        &__p{
+            grid-area: c;
+            font-size: 1.2rem;
+            margin: 0;
+            text-align: left;
+        }
+    } 
+}
+
+@media screen and (min-width: 1024px){
+    .info{
+        margin: 0 auto;
+        &__art{
+            max-width: 80rem;
+            display: grid;
+            margin: 8rem auto;
+            column-gap: 6rem;
+            grid-template-areas: 
+            "az imz"
+            "bz imz"
+            "cz imz"
+            "dz imz"
+            "ez imz"
+            "fz imz"
+            "gz imz";
+        }
+        &__h2{
+            grid-area: az;
+            padding-top: 0;
+            font-size: 3rem;
+            width: 20rem;
+        }
+        &__coord{
+            grid-area: bz;
+        }
+        &__box{
+            grid-area: cz;
+            width: 18rem;
+        }
+        &__ico{
+            font-size: 1.5rem;
+        }
+        #typing1{
+            grid-area: dz;
+            font-size: 1.1rem;
+        }
+        #typing2{
+            grid-area: ez;
+            font-size: 1.3rem;
+        }
+        &__spanImg{
+            grid-area: fz;
+        }
+        &__butt{
+            grid-area: gz;
+        }
+        &__img{
+            grid-area: imz;
+            margin: 0;
+            width: 30rem;
+        }
+    }
+    .description{
+        height: 45rem;
+        &__art{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        &__h2{
+            margin: 0 0 4rem 0;
+        }
+    }
+}

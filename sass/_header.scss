@@ -1,0 +1,373 @@
+.header{
+    height: 18rem;
+    width: 100vw;
+    color: $white;
+    position: relative;
+    &--index{
+        height: 30rem;
+    }
+    &__article{
+        background: url(./../images/banner-img.jpg) center/cover;
+        background-position: 50% 30%;
+        width: 100vw;
+        height: calc(100% - 5rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        &--index{
+            background: url(./../images/homapage-banner-img.jpg) left/cover;
+            align-items: flex-start;
+            padding: 0 1.5rem;
+            background-size: 50rem;
+        }
+    }
+    &__h1{
+        color: transparent;
+        font-size: 3rem;
+        font-weight: 800;
+        &--index{
+            -webkit-text-stroke: 0.12rem $white;
+            font-size: 3.2rem;
+        }
+    }
+    &__h2{
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        text-shadow: 0.1rem 0.1rem 1rem $dark-grey;
+    }
+    &__p{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        text-shadow: 0.01rem 0.01rem 0.1rem $grey;
+        display: flex;
+        letter-spacing: 0.1rem;
+        color: $whiteTranspa2;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-weight: 500;
+        &--index{
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: $white;
+            text-shadow: 0.1rem 0.1rem 0 $dark-grey;
+            text-transform: none;
+            line-height: 0.6;
+        }
+    }
+    &__a{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+        letter-spacing: 0.1rem;
+        text-shadow: 0.01rem 0.01rem 0 $dark-grey;
+        font-weight: 500;
+    }
+    &__point{
+        color: $gold;
+        font-size: 2rem;
+        margin: 0 1rem;
+    }
+
+}
+
+// NAVIGATION
+
+
+.nav{
+    margin: auto;
+    height: 5rem;
+    width: 100vw;
+    max-width: 80rem;
+    background-color: $dark-grey;
+    display: grid;
+    grid-template-columns: 4rem auto 4rem;
+    gap: 1rem;
+    overflow: hidden;
+    &__index{
+        width: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    &__box{
+        position: absolute;
+        width: 100vw;
+        height: 13rem;
+        top:5rem;
+        list-style: none;
+        background: $whiteTranspa;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: uppercase;
+        color: $grey;
+        visibility: hidden;
+        &--right{
+            flex-direction: row;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: $dark-grey;
+        text-shadow: 0.1rem 0.1rem 0 $white;
+        &--right{
+            font-size: 5rem;
+        }
+        &:hover{
+            color: $purple;
+        }
+    }
+    &__toggle{
+        height: 5rem;
+        font-size: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        cursor: pointer;
+    }
+    &__butt{
+        z-index: 10;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+.toggle, .toggle2{
+    transition: 1s ease-in-out;
+    &__open{
+        display: block;
+    }
+    &__close{
+        display: none;
+        &::before{
+            display: none; 
+        }
+    }
+}
+.toggle__on{
+    .toggle{
+        transition: 1s ease-in-out;
+        &__open{
+            display: none;
+        }
+        &__close{
+            display: block;
+            &::before{
+                display: block;
+            } 
+        }
+    }
+    .nav{
+        &__box--left{
+            visibility: visible;
+        }
+    }
+    .header{
+        &__h1{
+            visibility: hidden;
+        }
+        &__h2{
+            visibility: hidden;
+        }
+        &__p{
+            visibility: hidden;
+        }
+        &__audio{
+            visibility: hidden;
+        }
+    }
+}
+.toggle__on2{
+    .toggle2{
+        &__open{
+            display: none;
+        }
+        &__close{
+            display: block;
+            &::before{
+                display: block;
+            } 
+        }
+    }
+    .nav{
+        &__box--right{
+            visibility: visible;
+        }
+    }
+    .header{
+        &__h1{
+            visibility: hidden;
+        }
+        &__h2{
+            visibility: hidden;
+        }
+        &__p{
+            visibility: hidden;
+        }
+        &__audio{
+            visibility: hidden;
+        }
+    }
+}
+
+
+@media screen and (min-width: 767px){
+    .header{
+        height: 30rem;
+        &--index{
+            height: 40rem;
+        }
+        &__article{
+            &--index{
+                padding-left: 4rem;
+                background-size: 70rem;
+
+            }
+        }
+        &__h1{
+            &--index{
+                font-size: 5.6rem;
+            }
+        }
+        &__h2{
+            margin-bottom: 2rem;
+        }
+    }
+    .nav{
+        &__toggle{
+            height: 4rem;
+            font-size: 4rem;
+            margin-top: 0.5rem;
+        }
+        &__box{
+            height: 25rem;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .header{
+        position: relative;
+        background: url(./../images/banner-img.jpg) center top/cover;
+        height: 35rem;
+        &--index{
+            background: url(./../images/homapage-banner-img.jpg) left top/cover;
+            align-items: flex-start;
+            height: 50rem;
+        }
+        &__article{
+            height: 100%;
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0;
+            background: none;
+            &--index{
+                background: none;
+            }
+        }
+        &__h2{
+            font-size: 3.5rem;
+            margin-top: 0;
+        }
+        &__h1{
+            font-size: 7.5rem;
+        }
+    }
+    .nav{
+        background: transparent;
+        margin: 0 auto;
+        transition: .3s ease-in-out;    
+        display: grid;
+        grid-template-columns: 0 25rem 1fr 10rem 3rem;
+        gap: 0rem;
+        grid-template-areas: "e a b c d";
+        &__index{
+            width: 15rem;
+            margin-top: 0rem;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            grid-area: a;
+            position: relative;
+            padding-left: 0rem;
+        }
+        &__box{
+            position: relative;
+            background: transparent;
+            height: 5rem;
+            visibility: hidden;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            top: 0;
+            width: auto;
+            &--left{
+                grid-area: b;
+            }
+            &--right{
+                margin-right: 2rem;
+                grid-area: c;
+            }
+        }
+        &__link{
+            font-size: 1rem;
+            font-weight: 600;
+            color: $whiteTranspa;
+            text-shadow: 0.05rem 0.05rem 0 $grey;
+            &--right{
+                color: $whiteTranspa2;
+            }
+            &:hover{
+                font-size: 1.2rem;
+                color: $white;
+                text-shadow: 0.1rem 0.1rem 0 $grey;
+            }
+        }
+    }
+    .toggle{
+        margin-top: 0rem;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        height: 5rem;
+        font-size: 3rem;
+        color: $whiteTranspa;
+        text-shadow: 0.05rem 0.05rem 0 $grey;
+        grid-area: d;
+    }
+    .toggle2{
+        display: none;
+    }
+    .toggle__on{
+        .nav{
+            &__box{
+                visibility: visible;
+            }
+        }
+        .header{
+            &__h1{
+                visibility: visible;
+            }
+            &__h2{
+                visibility: visible;
+            }
+            &__p{
+                visibility: visible;
+            }
+            &__audio{
+                visibility: visible;
+            }
+        }
+    }
+}

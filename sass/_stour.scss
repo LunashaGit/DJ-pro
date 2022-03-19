@@ -1,0 +1,355 @@
+.stour{
+    
+    div{
+        .visible{
+        }
+            .active{
+                display: initial;
+            }
+            .inactive{
+                display: none;
+            }
+        .stour__box{
+            border: #FFF;
+            
+        }
+    }
+    
+    margin-left:1rem;
+    margin-right:1rem;
+    &__h2{
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+        color: $dark-grey;
+    }
+    &__h3{
+        font-size:1.8rem;
+        color: $grey;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+    &__h4, &__p{
+        font-size:1rem;
+        color: $grey;
+        font-weight: 300;
+
+    }
+    &__h4{
+        margin-top: 1.5rem;
+    }
+    &__h5{
+        font-size:1.4rem;
+        font-weight: 500;
+    }
+    &__link{
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+
+    }
+    &__art{
+        &--box{
+            text-align: center;
+            background-color: $dark-grey;
+            border-radius: 1rem 1rem 0 0;
+        }
+        &--right{
+            padding: 1rem;
+            border: 0.1rem solid $greyTranspa;
+        }
+        &--left{
+            display: flex;
+            flex-direction: column;
+            float: left;
+            padding: 1rem;
+            border-left: 0.1rem solid $greyTranspa;
+            input{
+                width: 2rem;
+                height: 2rem;
+                accent-color: $purple;
+            }
+            .bar{
+                height: 10rem;
+                width: 1rem;
+                border-left: 0.1rem solid $greyTranspa;
+                margin-left:1rem; 
+            }
+            
+        }
+    }
+}
+
+.stour{
+    .radio--last{
+        margin-bottom: 4rem;
+    }
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+    background-color: $greyTranspa2;
+    &__art{
+        max-width: 80rem;
+        &--box{
+            height: 20rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 2rem 3rem;
+        }
+        &--right{
+            background-color: $white;
+            padding: 3rem 1rem;
+        }
+        &--left{
+            background-color: $white;
+            padding: 5rem 2rem 0rem 2rem;
+            margin-bottom: 20rem;
+            input{
+                -webkit-appearance: none;
+                appearance: none;
+                background-color: transparent;
+                margin: 0;
+                color: $purple;
+                width: 3rem;
+                height: 3rem;
+                border: 0.15rem solid $greyTranspa;
+                border-radius: 50%;
+                transform: translateY(-0.075rem);
+                display: grid;
+                place-content: center;
+                &::before {
+                    content: "";
+                    width: 0.65rem;
+                    height: 0.65rem;
+                    border-radius: 50%;
+                    transform: scale(0);
+                    transition: 120ms transform ease-in-out;
+                    box-shadow: inset 1rem 1rem $purple;
+                    }
+                &:checked::before {
+                    transform: scale(1.3);
+                    }
+                
+            }
+            
+            .bar{
+                min-height: 8rem;
+                max-height: 13rem;
+                width: 1rem;
+                border-left: 0.1rem solid $greyTranspa;
+                margin-left:1.5rem;
+                &--first{
+                    min-height: 17rem;
+                    max-height: 21rem;
+
+                }
+                
+            }
+        }
+    }
+    &__h3{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+    }
+    &__h4{
+        font-size: 1.8rem;
+    }
+    &__h5{
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 1rem 0;
+    }
+    &__p{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    &__link{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        transition: 0.3s ease-in-out; 
+        &:hover{
+            font-style: italic;
+            font-size: 1rem;
+        }
+        i{
+            font-size: 1.5rem;
+        }
+    }
+}
+.visible{
+    padding-bottom: 0.8rem;
+    border-bottom: 0.5rem $purple solid;
+    transition: 0.3s ease-in-out; 
+    color: $white; 
+}
+
+@media screen and (min-width: 500px){
+    .radio--last{
+        margin-bottom: 0rem;
+    }
+    .stour{
+        &__art{
+            &--left{
+            padding: 3rem 2rem 0rem 2rem;
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px){
+    .stour{
+        .radio--last{
+            margin-bottom: 0rem;
+        }
+        .bar{
+            height: 6rem;
+        }
+        &__art--box{
+            height: 20vh;
+        }
+        &__h3{
+            display:inline-flex;
+            padding:7vw;
+            &:nth-child(1)::after{
+                display:none;
+            }
+        }
+        &__h4{
+            margin-top: 2.25rem;
+        }
+        &__link{
+            margin-bottom: 2rem;
+        }
+        &__art{
+            &--left{
+                margin-right: 7.5rem;
+            }
+        }
+    }
+        .stour{
+            padding: 5rem 3rem;
+            &__art{
+                &--box{
+                    height: 10rem;
+                    flex-direction: row;
+                    padding: 0rem 8rem;
+                }
+                &--left{
+                    margin-right: 3rem;
+                    .bar{
+                        height: 10rem;
+                        &--first{
+                            height: 16rem;
+                        }
+                    }
+                }
+            }
+            &__h3{
+                padding: 0rem;
+                display: flex;
+                align-items: center;
+            }
+            &__h4{
+                font-size: 1.5rem;
+            }
+            &__h5{
+                font-size: 2rem;
+                font-weight: 500;
+                margin: 1rem 0;
+            }
+            &__link{
+                font-size: 1.3rem;
+                i{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .visible{
+            padding-bottom: 0rem;
+        }
+    }
+
+@media screen and (min-width: 1024px) {
+    .stour{
+        .radio--last{
+            margin-bottom: 0rem;
+        }
+        padding: 5rem 0rem;
+        width: 100vw;
+        div{
+            margin: 0 auto;
+            max-width: 80rem;
+        }
+        &__art{
+            &--box{
+                height: 8rem;
+                padding: 0rem 20rem;
+            }
+            &--left{
+            padding: 6rem 2rem 0rem 2rem;
+            padding-left: 10rem;
+
+                border-left: 0.05rem solid $greyTranspa;
+                input{
+                    width: 2rem;
+                    height: 2rem;
+                    border: 0.05rem solid $greyTranspa;
+                    &::before {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        }
+                }
+                .bar{
+                    min-height: 0;
+                    height: 7rem;
+                    width: 0.05rem;
+                    border-left: 0.05rem solid $greyTranspa;
+                    margin-left:1rem;
+                    &--first{
+                        height: 12rem;
+                    }
+                }
+            }
+        }
+        &__span{
+            display: grid;
+            grid-template-columns: 1fr 10rem;
+            grid-template-areas: 
+            "a a"
+            "b d"
+            "c d";
+        }
+        &__h3{
+            font-size: 1.2rem;
+        }
+        &__h4{
+            font-size: 1.1rem;
+            grid-area: a;
+        }
+        &__h5{
+            grid-area: b;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 1.2rem 0;
+        }
+        &__p{
+            grid-area: c;
+            font-size: 1rem;
+            margin-right: 7rem;
+        }
+        &__link{
+            grid-area: d;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            i{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
